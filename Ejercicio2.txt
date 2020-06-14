@@ -1,0 +1,49 @@
+#include<iostream>
+#include<stdlib.h>
+#include<time.h>
+
+using namespace std;
+
+int main ()
+
+{
+    int NUM, A = 0, opc = 0;
+
+        printf("Adivina el numero\n");
+        printf("1 - Comenzar juego\n");
+        printf("2 - Salir\n");
+        scanf("%d", &opc);
+    
+    
+        while (opc!=2)
+        {
+
+            printf("Adivine un numero entre el 1 - 100: \n");
+            scanf("%d", &NUM);
+
+            while (A == 0)
+            {
+                if (NUM<69)
+                {
+                    printf("El numero debe ser mayor intente de nuevo. \n");
+                    scanf("%d", &NUM);
+                }
+                else if (NUM>69)
+                {
+                    printf("El numero debe ser menor intente de nuevo. \n");
+                    scanf("%d", &NUM);
+                }
+                else
+                {
+                    printf("Felicidades, has adivinado el numero!\n");
+                    A = 1;
+
+                    printf("1 - Realizar otro intento\n");
+                    printf("2 - Salir\n");
+                    scanf("%d", &opc);
+
+                }
+            }
+        }
+    return 0;
+}

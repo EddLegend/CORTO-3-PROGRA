@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+using namespace std;
+
+int main()
+
+{
+    int data;
+
+    printf("Digita un a%co\n", 164);
+    scanf("%d", &data);
+
+    if (data % 4 == 0 && data % 100 !=0 || data % 400 == 0)
+    {
+        printf("El a%co que has digitado es biciesto", 164);
+    }
+    else
+    {
+        printf("El a%co que has digitado no es biciesto", 164);
+    }
+
+    return 0;
+
+} 

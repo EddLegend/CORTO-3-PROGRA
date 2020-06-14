@@ -1,0 +1,41 @@
+#include<iostream>
+#include<stdlib.h>
+#include<string>
+
+using namespace std;
+
+int main ()
+
+{
+int HTRABAJADAS, HEXTRAS;
+float SREAL, STOTAL, SREAL2, TOTALHT, TOTALHE, ISSS, AFP, RENTA;
+
+printf("Ingrese la cantidad de horas trabajadas\n");
+scanf("%d", &HTRABAJADAS);
+printf("ingrese la cantidad de horas extra realizadas\n");
+scanf("%d",&HEXTRAS);
+
+TOTALHT=HTRABAJADAS*1.75;
+TOTALHE=HEXTRAS*2.50;
+STOTAL=TOTALHE+TOTALHT;
+
+ISSS=STOTAL*0.04;
+AFP=STOTAL*0.0625;
+RENTA=STOTAL*0.10;
+SREAL=STOTAL-ISSS-AFP;
+SREAL2=STOTAL-ISSS-AFP-RENTA;
+
+
+    if(STOTAL>500)
+{
+    printf("Su salario total es %f\n", STOTAL);
+    printf("Su salario real es %f\n", SREAL2);
+}
+    else
+{
+    printf("Su salario total es %f\n", STOTAL);
+    printf("Su salario real es %f\n", SREAL);
+}
+
+return 0;
+}
